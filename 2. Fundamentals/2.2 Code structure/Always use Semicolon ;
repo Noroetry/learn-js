@@ -1,0 +1,9 @@
+In most cases, a newline implies a semicolon. But “in most cases” does not mean “always”!
+But there are situations where JavaScript “fails” to assume a semicolon where it is really needed.
+
+This not work without semicolon:
+alert("Hello")
+[1, 2].forEach(alert);
+
+Because the engine interprete:
+alert("Hello")[1, 2].forEach(alert);

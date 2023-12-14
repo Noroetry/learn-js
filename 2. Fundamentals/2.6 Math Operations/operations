@@ -1,0 +1,58 @@
+Addition +
+Subtraction -
+Multiplication *
+Division /
+Remainder %
+Exponentiation **
+
+alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+alert( 2 ** 2 ); // 2² = 4
+
+alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
+alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+
+Usually, the plus operator + sums numbers.
+
+But, if the binary + is applied to strings, it merges (concatenates) them:
+
+let s = "my" + "string";
+alert(s); // mystring
+Note that if any of the operands is a string, then the other one is converted to a string too.
+
+For example:
+
+alert( '1' + 2 ); // "12"
+alert( 2 + '1' ); // "21"
+
+The unary plus or, in other words, the plus operator + applied to a single value, doesn’t do anything to numbers. But if the operand is not a number, the unary plus converts it into a number.
+let apples = "2";
+let oranges = "3";
+
+// both values converted to numbers before the binary plus
+alert( +apples + +oranges ); // 5
+
+Assignment = returns a value
+The fact of = being an operator, not a “magical” language construct has an interesting implication.
+
+All operators in JavaScript return a value. That’s obvious for + and -, but also true for =.
+
+The call x = value writes the value into x and then returns it.
+
+Here’s a demo that uses an assignment as part of a more complex expression:
+
+let a = 1;
+let b = 2;
+
+let c = 3 - (a = b + 1);
+
+alert( a ); // 3
+alert( c ); // 0
+
+Modify-in-place
+n += 5; // now n = 7 (same as n = n + 5)
+n *= 2; // now n = 14 (same as n = n * 2)
+n *= 3 + 5; // right part evaluated first, same as n *= 8
+
+Increment/decrement
+Increment/decrement can only be applied to variables. Trying to use it on a value like 5++ will give an error.
+var++, ++var, --var, var--
